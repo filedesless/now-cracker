@@ -1,7 +1,7 @@
 
 
-all: src/main.go src/index.go
-	go run $^
+all: main.go index.go
+	FLAG=flag{fake} go run $^
 
 clean:
 	find . -name "*~" -exec rm {} \;

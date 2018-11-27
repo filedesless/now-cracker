@@ -28,10 +28,11 @@ func filterOutOldThings(t time.Time) {
 		}
 	}
 	things = new_things
+	fmt.Printf("%v\n", things)
 }
 
 func addNewThing(t time.Time) string {
-	pass := strconv.Itoa(1000 + rand.Intn(9000))
+	pass := strconv.Itoa(1000000 + rand.Intn(9000000))
 	hash := md5.Sum([]byte(pass))
 	hexDigest := hex.EncodeToString(hash[:])
 	things = append(things, thing{t, pass, hexDigest})
