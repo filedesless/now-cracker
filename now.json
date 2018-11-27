@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+	{ "src": "index.go", "use": "@now/go" }
+    ],
+    "routes": [
+	{
+	    "src": "/(?<hash>[^/]*)",
+	    "dest": "/index.go"
+	}
+    ],
+    "env": {
+	"FLAG": "@flag"
+    }
+}
