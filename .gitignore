@@ -13,3 +13,5 @@
 
 *~
 sol.py
+.vercel
+.env*.local
