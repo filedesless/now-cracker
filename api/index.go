@@ -1,4 +1,4 @@
-package main
+package handler
 
 import (
 	"crypto/md5"
@@ -37,7 +37,7 @@ func addNewThing(t time.Time) string {
 	hexDigest := hex.EncodeToString(hash[:])
 	things = append(things, thing{t, pass, hexDigest})
 	return hexDigest
-}	
+}
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	now := time.Now()
